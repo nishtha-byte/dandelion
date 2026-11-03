@@ -43,6 +43,12 @@ h3 a:hover { color: var(--accent); }
 .listener-note { margin-top: 40px; padding: 30px; border: 2px solid var(--ink); border-radius: 22px; background: var(--lavender); }
 .listener-note h3 { font-size: 36px; }
 .listener-note > p:not(.kicker) { max-width: 620px; color: #5f5d57; font-size: 11px; line-height: 1.8; }
+.pocket-note { display: grid; grid-template-columns: 90px 1fr; gap: 20px; align-items: center; margin-top: 16px; padding: 30px; border: 2px solid var(--ink); border-radius: 22px; background: #fff0cf; }
+.pocket-flower { width: 72px; height: 72px; animation: bob 3s ease-in-out infinite; }
+.pocket-note h3 { margin: 12px 0; font-size: 36px; }
+.pocket-note h3 em { color: #ed8b38; }
+.reminder-message { min-height: 20px; margin: 0; color: #5f5d57; font-size: 12px; line-height: 1.7; }
+.reminder-button { margin-top: 16px; }
 .play-button { display: grid; width: 58px; height: 58px; place-items: center; border: 2px solid var(--ink); border-radius: 50%; background: var(--paper); font-size: 15px; }
 .play-button:hover { background: var(--ink); color: var(--paper); }
 .contact { display: grid; grid-template-columns: .7fr 1.3fr; gap: 10vw; padding: 110px 4vw; border-bottom: 2px solid var(--ink); }
@@ -56,4 +62,6 @@ h3 a:hover { color: var(--accent); }
 footer { border-bottom: 0; padding: 72px 0 32px; }
 footer p { color: var(--muted); font-size: 10px; }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 700px) { .container { padding: 20px; } nav { display: none; } .hero, .about, .contact { display: block; min-height: 0; } .hero { padding-top: 48px; } h1 { max-width: 100%; font-size: clamp(58px, 18vw, 82px); } .intro { max-width: 100%; font-size: 11px; } .flower { height: 330px; margin-top: 28px; } .sun { top: 24px; right: 8%; width: min(220px, 62vw); height: min(220px, 62vw); } .head { top: 48px; right: 18%; width: min(130px, 36vw); height: min(130px, 36vw); } .stem { top: 155px; right: 43%; height: 180px; } .flower p { right: 0; bottom: 24px; font-size: 14px; } .about, .listen, .contact { padding: 75px 0; } .about > div, .contact > div { margin-top: 45px; } .section-title { display: block; } .episode { grid-template-columns: 35px 1fr; } .play-button { grid-column: 2; } footer { display: block; } }
+@keyframes bob { 50% { transform: translateY(-7px) rotate(8deg); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+@media (max-width: 700px) { .container { padding: 20px; } nav { display: none; } .hero, .about, .contact { display: block; min-height: 0; } .hero { padding-top: 48px; } h1 { max-width: 100%; font-size: clamp(58px, 18vw, 82px); } .intro { max-width: 100%; font-size: 11px; } .flower { height: 330px; margin-top: 28px; } .sun { top: 24px; right: 8%; width: min(220px, 62vw); height: min(220px, 62vw); } .head { top: 48px; right: 18%; width: min(130px, 36vw); height: min(130px, 36vw); } .stem { top: 155px; right: 43%; height: 180px; } .flower p { right: 0; bottom: 24px; font-size: 14px; } .about, .listen, .contact { padding: 75px 0; } .about > div, .contact > div { margin-top: 45px; } .section-title { display: block; } .episode { grid-template-columns: 35px 1fr; } .play-button { grid-column: 2; } .pocket-note { grid-template-columns: 52px 1fr; gap: 14px; padding: 22px 18px; } .pocket-flower { width: 48px; height: 48px; align-self: start; } footer { display: block; } }
